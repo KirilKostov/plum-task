@@ -1,0 +1,48 @@
+@import "colors";
+
+.booking-panel {
+  margin: 0 60px;
+  padding: 15px 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+
+  @media screen and (min-width: $tabletSize) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .booking-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $tabletSize) {
+      flex-direction: column;
+      border-right: 1px solid $grey;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    .booking-item-label {
+      color: darken($grey, 50%);
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  .booking-button {
+    cursor: pointer;
+    background-color: $orange;
+    color: $black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
+
+    @media screen and (min-width: $tabletSize) {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}

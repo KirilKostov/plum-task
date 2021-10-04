@@ -1,23 +1,14 @@
-import logo from '../assets/logo.svg';
-import '../scss/App.scss';
+import "../scss/app.scss";
+import { Header } from "./components/Header";
+import { BookingPanel } from "./components/BookingPanel";
+import { Property } from "./components/Property";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header sideMenu search title="Plum Guide" />
+      <BookingPanel />
+      <Property />
     </div>
   );
 }
