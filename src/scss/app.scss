@@ -1,0 +1,10 @@
+@import "vendor/normalize";
+@import "header";
+@import "bookingPanel";
+@import "property";
+@import "carousel";
+
+html,
+body {
+  min-height: 100vh;
+}
