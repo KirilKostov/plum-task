@@ -1,0 +1,41 @@
+@import "variables";
+@import "colors";
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .carousel-image-container {
+    width: 480px;
+    height: 270px;
+    backdrop-filter: blur(10px);
+    background-color: rgba($grey, 0.3);
+
+    @media screen and (min-width: $tabletSize) {
+      width: 600px;
+      height: 335px;
+    }
+
+    @media screen and (min-width: $desktopSize) {
+      width: 800px;
+      height: 450px;
+    }
+  }
+
+  .left-carousel-controller,
+  .right-carousel-controller {
+    z-index: 1;
+    font-size: 2em;
+    color: darken($grey, 70%);
+  }
+
+  .left-carousel-controller {
+    margin-right: -7px;
+  }
+
+  .right-carousel-controller {
+    margin-left: -7px;
+  }
+}

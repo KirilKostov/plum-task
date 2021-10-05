@@ -1,4 +1,5 @@
 import React from "react";
+import { Carousel } from "./Carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -37,7 +38,9 @@ export function Property() {
           </li>
         ))}
       </div>
-      <div className="property-carousel">CAROUSEL</div>
+      <div className="property-carousel">
+        <Carousel />
+      </div>
     </div>
   );
 }
